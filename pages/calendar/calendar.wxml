@@ -59,6 +59,6 @@
     <text class='number'>{{ban}}</text>
     <text class='day'></text>
     </view>    
-    <text class='beizu'>备注:红色21点到8点，黄色14点到21点，蓝色8点到14点</text>
+    <text class='beizu'>备注:红色21点到8点，黄色14点到21点，蓝色8点到14点,灰色休息</text>
   </view>
 </view>
