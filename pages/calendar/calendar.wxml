@@ -30,29 +30,22 @@
             </view>
             <!-- 每个月份的有数字的单元格 -->
             <view class='cell' wx:else>
-              <!-- 当前日期 -->
-              <view wx:if="{{days[j+k].isSign == true}}" style='background-color:#00FF00' class='cell'>
+                <!-- 红色 -->
+              <view wx:if="{{days[j+k].onDuty == 3}}" style='background-color:#0000FF' class='cell'>
                 <text>{{days[j+k].date}}</text>
               </view>
-              <!-- 当前日期未签到 -->
-              <view wx:else>
-                <!-- 红色 -->
-                <view wx:if="{{days[j+k].onDuty == 3}}" style='background-color:#0000FF' class='cell'>
-                  <text>{{days[j+k].date}}</text>
-                </view>
-                <!-- 黄色 -->
-                <view wx:elif="{{days[j+k].onDuty == 2}}" style='background-color:#FFFF00' class='cell'>
-                  <text>{{days[j+k].date}}</text>
-                </view>
-                <!-- 蓝色 -->
-                <view wx:elif="{{days[j+k].onDuty == 1}}" style='background-color:#FF0000' class='cell'>
-                  <text>{{days[j+k].date}}</text>
-                </view>
-                <!-- 灰色 -->
-                <view wx:else="{{days[j+k].onDuty == 0}}" style='background-color:#C0C0C0' class='cell'>
-                  <text>{{days[j+k].date}}</text>
-                </view>                
+              <!-- 黄色 -->
+              <view wx:elif="{{days[j+k].onDuty == 2}}" style='background-color:#FFFF00' class='cell'>
+                <text>{{days[j+k].date}}</text>
               </view>
+              <!-- 蓝色 -->
+              <view wx:elif="{{days[j+k].onDuty == 1}}" style='background-color:#FF0000' class='cell'>
+                <text>{{days[j+k].date}}</text>
+              </view>
+              <!-- 灰色 -->
+              <view wx:else="{{days[j+k].onDuty == 0}}" style='background-color:#C0C0C0' class='cell'>
+                <text>{{days[j+k].date}}</text>
+              </view>                
             </view>
           </view>
         </view>
@@ -66,6 +59,6 @@
     <text class='number'>{{ban}}</text>
     <text class='day'></text>
     </view>    
-    <text class='beizu'>备注:红色21点到8点，黄色14点到21点，蓝色8点到14点，绿色是当天</text>
+    <text class='beizu'>备注:红色21点到8点，黄色14点到21点，蓝色8点到14点</text>
   </view>
 </view>
